@@ -1,15 +1,18 @@
 export default class Person {
 	constructor({id, vehicles, kmTraveled, from, to}) {
-		this.id = id;
+		this.id = Number(id);
 		this.vehicles = vehicles;
 		this.kmTraveled = kmTraveled;
 		this.from = from;
 		this.to = to;
 	}
 
+
 	formatted(language) {
 		const mapDate = date => {
 			const [year, month, day] = date.split('-').map(Number);
+
+			console.log('date spit', `${year}, ${(month -1)}, ${day}`)
 
 			return new Date(year, (month -1), day);
 		};
@@ -31,9 +34,16 @@ export default class Person {
 		}
 	}
 
-	static genaeratInstanceFromString(text) {
+	static setId(database) {
+		const lestId = database.length;
+		const id = lestId + Date.now()
+		return Number(id);
+	}
+
+	static genaeratInstanceFromString(text, id) {
 		const EMPTY_SPACE = ' ';
-		const [id, vehicles, kmTraveled, from, to] = text.split(EMPTY_SPACE);
+		const [vehicles, kmTraveled, from, to] = text.split(EMPTY_SPACE);
+
 
 		return new Person({
 			id,
@@ -44,4 +54,5 @@ export default class Person {
 		});
 
 	}
+
 }

@@ -1,7 +1,7 @@
 import mocha from 'mocha';
 import chai from 'chai';
 
-import Person from "../src/person.js";
+import Person from "../src/entities/person.js";
 
 const {describe, it} = mocha;
 const {expect} = chai;
