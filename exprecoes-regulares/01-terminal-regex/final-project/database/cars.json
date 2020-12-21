@@ -1,0 +1,23 @@
+[
+	{
+		"id": "ca965a47-8882-4a75-86f5-34e628e8e793",
+		"name": "911",
+		"reluseYear": 2020,
+		"available": true,
+		"gasAvailable": true
+	},
+	{
+		"id": "e0dd23ec-4561-46d7-927d-64f4295ee802",
+		"name": "Corvette",
+		"reluseYear": 2020,
+		"available": true,
+		"gasAvailable": true
+	},
+	{
+		"id": "4270695a-d3a9-44e4-8dfc-e50fb2dd55c0",
+		"name": "Civic",
+		"reluseYear": 2020,
+		"available": true,
+		"gasAvailable": true
+	}
+]
