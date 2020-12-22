@@ -10,7 +10,7 @@ describe('TextProcessorAPI', () => {
 			.build();
 
 		expect(result).to.be.deep.equal(mock);
-	})
+	});
 
 	it('#extractPeopleData', () => {
 		const result = new TextProcessorFluentAPI(mock)
@@ -29,5 +29,5 @@ describe('TextProcessorAPI', () => {
 		]
 
 		expect(result).to.be.deep.equal(expected);
-	})
-})
+	});
+});
