@@ -1,6 +1,5 @@
-export  const database = [
+export const database = [
 	{
-		"_id": "604272d1fee03e4ce92072d0",
 		"balance": "$3,651.61",
 		"age": 22,
 		"name": "Blair Perry",
@@ -10,7 +9,6 @@ export  const database = [
 		"address": "367 Glen Street, Warren, Idaho, 416"
 	},
 	{
-		"_id": "604272d1094f95a17ab80799",
 		"balance": "$2,466.44",
 		"age": 29,
 		"name": "Parker May",
@@ -20,7 +18,6 @@ export  const database = [
 		"address": "654 Berkeley Place, Jennings, Illinois, 431"
 	},
 	{
-		"_id": "604272d1eed39687d01b980d",
 		"balance": "$3,820.17",
 		"age": 22,
 		"name": "Graves Carver",
@@ -30,7 +27,6 @@ export  const database = [
 		"address": "301 Humboldt Street, Bellamy, American Samoa, 598"
 	},
 	{
-		"_id": "604272d1e6d24c938012c79e",
 		"balance": "$1,809.34",
 		"age": 36,
 		"name": "Hudson Olsen",
@@ -40,7 +36,6 @@ export  const database = [
 		"address": "600 Church Avenue, Hobucken, Kentucky, 769"
 	},
 	{
-		"_id": "604272d14a23395550ca8966",
 		"balance": "$1,246.69",
 		"age": 32,
 		"name": "Gonzales Perez",
@@ -50,7 +45,6 @@ export  const database = [
 		"address": "198 Seagate Avenue, Lloyd, Hawaii, 498"
 	},
 	{
-		"_id": "604272d1087ef8b604f654d4",
 		"balance": "$3,956.15",
 		"age": 25,
 		"name": "Elisa Frank",
@@ -60,7 +54,6 @@ export  const database = [
 		"address": "983 Kimball Street, Westwood, Minnesota, 767"
 	},
 	{
-		"_id": "604272d1c4b3ca8b6b08dd81",
 		"balance": "$3,896.31",
 		"age": 28,
 		"name": "James Strong",
@@ -70,7 +63,6 @@ export  const database = [
 		"address": "265 Hill Street, Ryderwood, Massachusetts, 946"
 	},
 	{
-		"_id": "604272d1c8e949aba87b7d82",
 		"balance": "$2,193.66",
 		"age": 34,
 		"name": "Autumn Haynes",
