@@ -1,0 +1,10 @@
+DROP DATABASE IF EXISTS "heroes";
+CREATE DATABASE "heroes";
+
+DROP TABLE IF EXISTS "warriors";
+CREATE TABLE IF NOT EXISTS "warriors" (
+    "id"   SERIAL PRIMARY KEY,
+    "name" VARCHAR(255) NOT NULL
+);
+
+SELECT * FROM warriors;
