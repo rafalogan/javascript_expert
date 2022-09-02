@@ -106,7 +106,7 @@ export default class FluentSQLBuilder {
 		}
 
 		const groupped = this.#performCount(results);
-		return this.#performOrderBy(groupped)
+		return  this.#performOrderBy(groupped)
 	}
 
 }

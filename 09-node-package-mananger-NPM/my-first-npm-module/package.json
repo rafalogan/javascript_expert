@@ -1,6 +1,6 @@
 {
   "name": "@rafalogan/fluentsql",
-  "version": "2.0.4",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
@@ -9,10 +9,6 @@
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --config jest.config.mjs ",
     "test:cov": "NODE_OPTIONS=--experimental-vm-modules npx jest --config jest.config.mjs --coverage ",
     "test:watch": "NODE_OPTIONS=--experimental-vm-modules npx jest --config jest.config.mjs --watchAll "
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/rafalogan/fluentsql.git"
   },
   "keywords": [],
   "author": "rafalogan",

@@ -9,7 +9,7 @@
 #find . -name *.js -not path '*node_modules**' | ipt &&
 
 # dentro do projeto
-# cp -r ../../testing/final-project
+# cp -r ../../02-javascript-testing/final-project
 
 CONTENT="'use strict';"
 find . -name '*.js' -not -path '*node_modules**' \
