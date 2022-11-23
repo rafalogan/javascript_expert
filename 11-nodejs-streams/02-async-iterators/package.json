@@ -1,13 +1,20 @@
 {
-  "name": "@rafaDWR/02-async-iterators",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-	"type": "module",
-	"scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+    "name": "@rafaDWR/02-async-iterators",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "npx nodemon ./webapi.js",
+        "start-server": "node webapi.js",
+        "api1": "curl localhost:3000",
+        "api2": "curl localhost:4000"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "nodemon": "^2.0.20"
+    }
 }
