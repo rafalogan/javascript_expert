@@ -1,0 +1,19 @@
+{
+  "name": "@rafaDWR/01-categories",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+		"native": "npx nodemon 01-native-stream.js",
+		"readable-writable": "npx nodemon 02-readable-writable.js",
+		"transform": "npx nodemon 03-transform.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
