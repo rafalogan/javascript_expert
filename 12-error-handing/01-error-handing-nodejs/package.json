@@ -1,0 +1,17 @@
+{
+    "name": "@rafaDW/01-error-handing-nodejs",
+    "version": "1.0.0",
+    "description": "",
+    "main": "1-server-error.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "npx nodemon 1-server-error.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "nodemon": "^2.0.20"
+    }
+}
