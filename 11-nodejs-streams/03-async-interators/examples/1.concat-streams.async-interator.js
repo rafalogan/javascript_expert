@@ -1,4 +1,4 @@
-import { Writable, PassThrough } from 'stream';
+import { pipeline } from 'stream/promises';
 import axios from 'axios';
 
 const API_01 = 'http://localhost:3000';
@@ -19,31 +19,29 @@ const requests = await Promise.all([
 
 const results = requests.map(({data}) => data);
 
-const output = Writable({
-    write(chunk, enc, callback) {
-        const data = chunk.toString().replace(/\n/, '');
+async function* output(stream){
+	for await (const data of stream) {
+		// ?=- -> ele faz a busca a partir do - de maneira reversa;
+		// :"(?<name>.*) -> procura pelo conteudo a partir dos : que esta dentro das aspas e extrai o mesmo;
+		const name = data.match(/:"(?<name>.*)(?=-)/).groups.name;
+		console.log(`[${name.toLowerCase()}]`, data);
+	}
+}
 
-        // ?=- -> ele faz a busca a partir do - de maneira reversa;
-        // :"(?<name>.*) -> procura pelo conteudo a partir dos : que esta dentro das aspas e extrai o mesmo;
-        const name = data.match(/:"(?<name>.*)(?=-)/).groups.name;
+async function* merge(streams){
+	for (const readable of streams) {
+		// faz trabalhar com object mode
+		readable.setEncoding('utf8');
+		for await (const chunk of readable) {
+			for (const line of chunk.trim().split('\n')) {
+				yield line;
+			}
+		}
 
-        console.log(`[${name.toLowerCase()}]`, data);
-        callback();
-    }
-})
+	}
+}
 
-const merge = (stream) => stream.reduce((prev, current, index, itens) => {
-    // impede que a stream feche
-    current.pipe(prev, { end: false });
-
-    // como colocamos end: false, vamos manipular ksomento quando o nosso currtn encerrar.
-    // Quando le terminar, verifica se todos encerraram para fechar toda a cadeia anterior.
-    current.on('end', () => itens.every(s => s.ended) && prev.end());
-
-    return prev
-}, new PassThrough())
-
-merge(results).pipe(output);
-
-// result[0].pipe(output);
-// result[1].pipe(output);
+await pipeline(
+	merge(results),
+	output
+)
