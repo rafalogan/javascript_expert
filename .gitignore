@@ -5,6 +5,7 @@
 # files
 .DS_Store
 .env
+**/big.file
 
 # folders
 \dist
@@ -14,6 +15,7 @@ data/data-base
 **/database/mongodb
 \coverage
 \.nyc_output
+
 
 # Modules
 node_modules
