@@ -1,6 +1,8 @@
 # idea's
 \.idea
 \.vscode
+**/.idea
+**/.vscode
 
 # files
 .DS_Store
