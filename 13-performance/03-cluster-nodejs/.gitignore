@@ -1,0 +1,6 @@
+# ignore log files
+**/log.txt
+log.txt
+
+*.log
+**/*.log
